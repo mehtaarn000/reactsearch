@@ -5,13 +5,7 @@ export interface userCard {
     url: string
 }
 
-export interface tableProps {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    arr: any
-}
-
-export default function Table(props: tableProps): JSX.Element {
-    const tableArr = props.arr.map((usercard: userCard) => {
+export default function Table(props: {usercard: userCard}): JSX.Element {
         return (
             <div>
                 <table>
@@ -20,7 +14,7 @@ export default function Table(props: tableProps): JSX.Element {
                             username
                         </td>
                         <td>
-                            {usercard.username}
+                            {props.usercard.username}
                         </td>
                     </tr>
                     <tr>
@@ -28,7 +22,7 @@ export default function Table(props: tableProps): JSX.Element {
                             password
                         </td>
                         <td>
-                            {usercard.password}
+                            {props.usercard.password}
                         </td>
                     </tr>
                     <tr>
@@ -36,7 +30,7 @@ export default function Table(props: tableProps): JSX.Element {
                             email
                         </td>
                         <td>
-                            {usercard.email}
+                            {props.usercard.email}
                         </td>
                     </tr>
                     <tr>
@@ -44,13 +38,10 @@ export default function Table(props: tableProps): JSX.Element {
                             url
                         </td>
                         <td>
-                            {usercard.url}
+                            {props.usercard.url}
                         </td>
                     </tr>
                 </table>
             </div>
         )
-    })
-
-    return <div>{tableArr}</div>
 }

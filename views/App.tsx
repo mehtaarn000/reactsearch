@@ -1,14 +1,14 @@
 import React, { useState } from "react"
 import Form from "./components/Form"
 import SwitchPageButton from "./components/SwitchPageButton"
-import  Table  from "./components/Table"
-import { tableProps } from "./components/Table"
+import SearchBar from "./components/SearchBar"
+import { userCard } from "./components/Table"
 
 interface appProps {
     props: {
         error: string | undefined, 
         form: boolean 
-        documents: tableProps
+        documents: userCard[]
     }
 }
 
@@ -25,7 +25,7 @@ export default function App({props}: appProps): JSX.Element {
     } else {
         return (
             <div>
-                <Table arr={props.documents}></Table>
+                <SearchBar docs={props.documents}></SearchBar>
                 <SwitchPageButton form={false} onClick={() => {setForm(true)}}></SwitchPageButton>
             </div>
         )
