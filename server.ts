@@ -29,7 +29,6 @@ const User: mongoose.Model<IUser> = mongoose.model('User', userSchema, "users");
 
 await register(app)
 app.get("/", async (_req, res) => {
-    console.log("helloworld")
     const uri = process.env.MONGO_URI
     mongoose.connect(String(uri), {useNewUrlParser: true, useUnifiedTopology: true});
 

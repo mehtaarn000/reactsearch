@@ -9,7 +9,7 @@ export default function Table(props: {usercard: userCard}): JSX.Element {
         return (
             <div>
                 <table>
-                    <tr>
+                    <tr style={{outline: "thin solid"}}>
                         <td>
                             username
                         </td>
@@ -17,7 +17,7 @@ export default function Table(props: {usercard: userCard}): JSX.Element {
                             {props.usercard.username}
                         </td>
                     </tr>
-                    <tr>
+                    <tr style={{outline: "thin solid"}}>
                         <td>
                             password
                         </td>
@@ -25,7 +25,7 @@ export default function Table(props: {usercard: userCard}): JSX.Element {
                             {props.usercard.password}
                         </td>
                     </tr>
-                    <tr>
+                    <tr style={{outline: "thin solid"}}>
                         <td>
                             email
                         </td>
@@ -33,7 +33,7 @@ export default function Table(props: {usercard: userCard}): JSX.Element {
                             {props.usercard.email}
                         </td>
                     </tr>
-                    <tr>
+                    <tr style={{outline: "thin solid"}}>
                         <td>
                             url
                         </td>
@@ -42,6 +42,7 @@ export default function Table(props: {usercard: userCard}): JSX.Element {
                         </td>
                     </tr>
                 </table>
+                <br></br>
             </div>
         )
 }

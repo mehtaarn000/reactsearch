@@ -39,7 +39,7 @@ export default class SearchBar extends React.Component<SearchProps, SearchState>
 
         return (
             <div>
-            <input type="text" placeholder="Enter item to be searched"  onChange={(e)=>this.searchSpace(e)} />
+            <input type="text" placeholder="Enter item"  onChange={(e)=>this.searchSpace(e)} />
             {items}
             </div>
         )
